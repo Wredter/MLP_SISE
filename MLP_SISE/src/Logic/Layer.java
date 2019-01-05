@@ -1,11 +1,17 @@
 package Logic;
 
+
+
+import Functions.ActivationFunctions;
+
 import java.util.ArrayList;
 import java.util.Random;
 
 public class Layer {
     public ArrayList<ArrayList<Double>> neurons;
-    public Layer(int numberOfNeurons,int numberOfInputs){
+    private ActivationFunctions activationFunction;
+    public Layer(int numberOfNeurons, int numberOfInputs, ActivationFunctions activationFunction){
+        this.activationFunction = activationFunction;
         Random rng = new Random();
         neurons = new ArrayList<>();
         for(int i=0;i<numberOfNeurons;i++){
@@ -25,15 +31,11 @@ public class Layer {
                 pom += input.get(i)*neuron.get(i);
             }
             pom += 1*neuron.get(neuron.size()-1);
-            pom = ActivationFunction(pom);
+            pom = activationFunction.ActivationFunction(pom);
             output.add(pom);
         }
         return output;
     }
-    private Double ActivationFunction(Double input){
-        return ((1d)/(1d+Math.exp(-input)));
-    }
-    private Double DerivativeOfActivationFunction(Double input){
-        return ((ActivationFunction(input))*(1d-ActivationFunction(input)));
-    }
+
+
 }

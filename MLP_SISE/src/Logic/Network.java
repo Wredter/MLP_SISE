@@ -1,15 +1,19 @@
 package Logic;
 
+import Functions.Linear;
+import Functions.Sigma;
+
 import java.util.ArrayList;
 
 public class Network {
     ArrayList<Layer> layers;
-    public Network(int numberOfInputs,int numberOfLayers,ArrayList<Integer> numberOfNeuronsInEachLayer){
+    public Network(int numberOfInputs,int numberOfOutputs,int numberOfHidenLayers,ArrayList<Integer> numberOfNeuronsInEachHidenLayer){
         layers = new ArrayList<>();
-        layers.add(new Layer(numberOfNeuronsInEachLayer.get(0),numberOfInputs));
-        for(int i=1;i<numberOfLayers;i++){
-            layers.add(new Layer(numberOfNeuronsInEachLayer.get(i),numberOfNeuronsInEachLayer.get(i-1)));
+        layers.add(new Layer(numberOfNeuronsInEachHidenLayer.get(0),numberOfInputs,new Sigma()));
+        for(int i=1;i<numberOfHidenLayers;i++){
+            layers.add(new Layer(numberOfNeuronsInEachHidenLayer.get(i),numberOfNeuronsInEachHidenLayer.get(i-1),new Sigma()));
         }
+        layers.add(new Layer(numberOfOutputs,numberOfNeuronsInEachHidenLayer.get(numberOfNeuronsInEachHidenLayer.size()-1),new Linear()));
     }
     public ArrayList<Double> FeedForward(ArrayList<Double> input){
         ArrayList<Double> resoultsOfLayer;
