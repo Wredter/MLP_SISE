@@ -8,7 +8,7 @@ import java.util.Collections;
 
 public class Network {
     ArrayList<Layer> layers;
-    Double learningRate = 0.05;
+    Double learningRate = 0.001;
     public Network(int numberOfInputs,int numberOfOutputs,int numberOfHidenLayers,ArrayList<Integer> numberOfNeuronsInEachHidenLayer){
         layers = new ArrayList<>();
         layers.add(new Layer(numberOfNeuronsInEachHidenLayer.get(0),numberOfInputs,new Sigma()));
@@ -36,8 +36,7 @@ public class Network {
         }
         return resoult/2d;
     }
-    public void Learn(ArrayList<Double> inputValues,ArrayList<Double> expectedValues){
-        ArrayList<Double> acualValues = this.FeedForward(inputValues);
+    public void Learn(ArrayList<Double> acualValues,ArrayList<Double> expectedValues){
         ArrayList<ArrayList<Double>> errorsInLayers = new ArrayList<>();
         //error for output layer
         for(int i=0; i < layers.get(layers.size()-1).neurons.size();i++){
@@ -52,7 +51,7 @@ public class Network {
             Double sumOfErrors = 0d;
             for(int j=0;j < layers.get(i+1).neurons.size();j++){
                 //Dla każdego neuronu w (i+1)-tej warstwie
-                for(int k=0;k < layers.get(i+1).neurons.get(j).get(k);k++){
+                for(int k=0;k < layers.get(i+1).neurons.get(j).size();k++){
                     //Dla każdej wagi "k" j-tego neuronu w (i+1)-tej warstwie
                     sumOfErrors += ((errorsInLayers.get(errorsInLayers.size()-1).get(j))*(layers.get(i+1).neurons.get(j).get(k)));
                 }
@@ -72,7 +71,7 @@ public class Network {
                 for(int k = 0;k < layers.get(i).neurons.get(j).size();k++){
                     //Dla każdej wagi
                     Double newWeight;
-                    newWeight = -learningRate*(layers.get(i).neurons.get(j).get(k)*errorsInLayers.get(i).get(j));
+                    newWeight = (-learningRate)*(layers.get(i).neurons.get(j).get(k)*errorsInLayers.get(i).get(j));
                     newWeight = layers.get(i).neurons.get(j).get(k) + newWeight;
                     layers.get(i).getNeurons().get(j).set(k,newWeight);
                 }
