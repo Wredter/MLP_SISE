@@ -34,15 +34,12 @@ public class Layer {
                 pom += input.get(i)*neuron.get(i);
             }
             //outputsOfNeurons.add(1*neuron.get(neuron.size()-1));
-            pom += 1*neuron.get(neuron.size()-1);
+            pom += neuron.get(neuron.size()-1);
             outputsOfNeurons.add(pom);
             pom = activationFunction.ActivationFunction(pom);
             output.add(pom);
         }
         return output;
-    }
-    public ArrayList<ArrayList<Double>> getNeurons(){
-        return neurons;
     }
 
 

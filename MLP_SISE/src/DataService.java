@@ -1,3 +1,4 @@
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -11,6 +12,24 @@ public class DataService {
         }
         if(isRandomized) {
             Collections.shuffle(testData);
+        }
+    }
+    public static void DeleteFile(String path)
+    {
+        try{
+
+            File file = new File(path);
+
+            if(file.delete()){
+                System.out.println(file.getName() + " zostal skasowany!");
+            }else{
+                System.out.println("Operacja kasowania sie nie powiodla.");
+            }
+
+        }catch(Exception e){
+
+            e.printStackTrace();
+
         }
     }
 

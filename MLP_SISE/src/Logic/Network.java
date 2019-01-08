@@ -8,7 +8,7 @@ import java.util.Collections;
 
 public class Network {
     ArrayList<Layer> layers;
-    Double learningRate = 0.001;
+    Double learningRate = 0.01;
     public Network(int numberOfInputs,int numberOfOutputs,int numberOfHidenLayers,ArrayList<Integer> numberOfNeuronsInEachHidenLayer){
         layers = new ArrayList<>();
         layers.add(new Layer(numberOfNeuronsInEachHidenLayer.get(0),numberOfInputs,new Sigma()));
@@ -25,7 +25,7 @@ public class Network {
         }
         return resoultsOfLayer;
     }
-    private Double Error(ArrayList<Double> actualValues,ArrayList<Double> expectedValues){
+    public Double Error(ArrayList<Double> actualValues,ArrayList<Double> expectedValues){
         if(actualValues.size()!= expectedValues.size()){
             System.out.println("Ty kurwo spierdoliłeś obliczanie błędu tablice nie są jednakoych rozmiarów");
             return null;
@@ -73,7 +73,7 @@ public class Network {
                     Double newWeight;
                     newWeight = (-learningRate)*(layers.get(i).neurons.get(j).get(k)*errorsInLayers.get(i).get(j));
                     newWeight = layers.get(i).neurons.get(j).get(k) + newWeight;
-                    layers.get(i).getNeurons().get(j).set(k,newWeight);
+                    layers.get(i).neurons.get(j).set(k,newWeight);
                 }
             }
         }
