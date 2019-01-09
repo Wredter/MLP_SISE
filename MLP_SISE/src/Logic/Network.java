@@ -68,12 +68,17 @@ public class Network {
             //Dla każdej warstwy
             for(int j =0;j < layers.get(i).neurons.size();j++){
                 //Dla każdego neuronu
+                Double newWeight = 0d;
                 for(int k = 0;k < layers.get(i).neurons.get(j).size();k++){
                     //Dla każdej wagi
-                    Double newWeight;
-                    newWeight = (-learningRate)*(layers.get(i).neurons.get(j).get(k)*errorsInLayers.get(i).get(j));
-                    newWeight = layers.get(i).neurons.get(j).get(k) + newWeight;
-                    layers.get(i).neurons.get(j).set(k,newWeight);
+                    Double x;
+                    if(k!=layers.get(i).neurons.get(j).size()-1) {
+                        newWeight = (-learningRate) * (layers.get(i).inputOfNeurons.get(k) * errorsInLayers.get(i).get(j));
+                    }else{
+                        newWeight = (-learningRate) * (1*errorsInLayers.get(i).get(j));
+                    }
+                    x = layers.get(i).neurons.get(j).get(k) + newWeight;
+                    layers.get(i).neurons.get(j).set(k,x);
                 }
             }
         }

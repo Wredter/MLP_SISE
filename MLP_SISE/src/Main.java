@@ -12,12 +12,12 @@ public class Main {
 
         ////////////////////////////////////////DATAPREP/////////////////////////////////////////////////////////////////////////////
         String projPath = "D:\\UnityProjects\\MLP_SISE\\MLP_SISE";
-        int numberOfEpocs = 50;
+        int numberOfEpocs = 100;
         Double sumaBledzikow;
         ArrayList<Integer> neuronsOnLayers = new ArrayList<>();
         neuronsOnLayers.add(1);
-        //neuronsOnLayers.add(15);
-        //neuronsOnLayers.add(10);
+        neuronsOnLayers.add(15);
+        neuronsOnLayers.add(10);
         DataService dataService = new DataService(true);
         DataService xpom = new DataService(false);
         ArrayList<Double> bledzik = new ArrayList<>();
