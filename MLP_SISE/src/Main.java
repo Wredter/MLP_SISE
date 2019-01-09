@@ -15,7 +15,7 @@ public class Main {
         int numberOfEpocs = 100;
         Double sumaBledzikow;
         ArrayList<Integer> neuronsOnLayers = new ArrayList<>();
-        neuronsOnLayers.add(1);
+        neuronsOnLayers.add(50);
         neuronsOnLayers.add(15);
         neuronsOnLayers.add(10);
         DataService dataService = new DataService(true);
@@ -39,6 +39,7 @@ public class Main {
         //////////////////////////////////////////LEARNING/////////////////////////////////////////////////////////////////////////
         for(int j = 0; j<=numberOfEpocs;j++) {
             sumaBledzikow = 0d;
+
             bledzikipom.add((double)j);
             for (int i = 0; i < dataService.getTestData().size(); i++) {
                 ArrayList<Double> expectedResoult = new ArrayList<>();

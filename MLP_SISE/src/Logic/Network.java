@@ -39,26 +39,19 @@ public class Network {
     public void Learn(ArrayList<Double> acualValues,ArrayList<Double> expectedValues){
         ArrayList<ArrayList<Double>> errorsInLayers = new ArrayList<>();
         //error for output layer
+        ArrayList<Double> errorsL = new ArrayList<>();
         for(int i=0; i < layers.get(layers.size()-1).neurons.size();i++){
-            ArrayList<Double> errors = new ArrayList<>();
-            errors.add((acualValues.get(i)-expectedValues.get(i))*layers.get(layers.size()-1).activationFunction.Derivative(layers.get(layers.size()-1).outputsOfNeurons.get(i)));
-            errorsInLayers.add(errors);
+            errorsL.add((acualValues.get(i)-expectedValues.get(i)));//*layers.get(layers.size()-1).activationFunction.Derivative(layers.get(layers.size()-1).outputsOfNeurons.get(i)));
         }
-
-        for(int i=layers.size()-2;i >=0;i--){
-            //Dla każdej warstwy poza ostatnią
+        errorsInLayers.add(errorsL);
+        for(int i = layers.size()-2;i >=0;i--){
             ArrayList<Double> errors = new ArrayList<>();
-            Double sumOfErrors = 0d;
-            for(int j=0;j < layers.get(i+1).neurons.size();j++){
-                //Dla każdego neuronu w (i+1)-tej warstwie
-                for(int k=0;k < layers.get(i+1).neurons.get(j).size();k++){
-                    //Dla każdej wagi "k" j-tego neuronu w (i+1)-tej warstwie
-                    sumOfErrors += ((errorsInLayers.get(errorsInLayers.size()-1).get(j))*(layers.get(i+1).neurons.get(j).get(k)));
+            for(int j = 0;j < layers.get(i).neurons.size();j++){
+                Double sumB = 0d;
+                for(int x = 0;x < layers.get(i+1).neurons.size();x++){
+                    sumB += errorsInLayers.get(errorsInLayers.size()-1).get(x)*layers.get(i+1).neurons.get(x).get(j);
                 }
-            }
-            for (int j=0;j < layers.get(i).neurons.size();j++){
-                //Sumabłędu warstwy następnej pomnożona przez to co potrzeba
-                errors.add(sumOfErrors*layers.get(i).activationFunction.Derivative(layers.get(i).outputsOfNeurons.get(j)));
+                errors.add(sumB*layers.get(i).activationFunction.Derivative(layers.get(i).outputsOfNeurons.get(j)));
             }
             errorsInLayers.add(errors);
         }
@@ -68,16 +61,19 @@ public class Network {
             //Dla każdej warstwy
             for(int j =0;j < layers.get(i).neurons.size();j++){
                 //Dla każdego neuronu
-                Double newWeight = 0d;
                 for(int k = 0;k < layers.get(i).neurons.get(j).size();k++){
                     //Dla każdej wagi
+                    Double newWeight;
                     Double x;
                     if(k!=layers.get(i).neurons.get(j).size()-1) {
                         newWeight = (-learningRate) * (layers.get(i).inputOfNeurons.get(k) * errorsInLayers.get(i).get(j));
                     }else{
-                        newWeight = (-learningRate) * (1*errorsInLayers.get(i).get(j));
+                        newWeight = (-learningRate) * (errorsInLayers.get(i).get(j));
                     }
                     x = layers.get(i).neurons.get(j).get(k) + newWeight;
+                    /*System.out.println(newWeight);
+                    System.out.println(layers.get(i).neurons.get(j).get(k));
+                    System.out.println(x);*/
                     layers.get(i).neurons.get(j).set(k,x);
                 }
             }
@@ -85,3 +81,21 @@ public class Network {
 
     }
 }
+/*
+for(int i=layers.size()-2;i >=0;i--){
+        //Dla każdej warstwy poza ostatnią
+        ArrayList<Double> errors = new ArrayList<>();
+        Double sumOfErrors = 0d;
+        for(int j=0;j < layers.get(i+1).neurons.size();j++){
+        //Dla każdego neuronu w (i+1)-tej warstwie
+        for(int k=0;k < layers.get(i+1).neurons.get(j).size();k++){
+        //Dla każdej wagi "k" j-tego neuronu w (i+1)-tej warstwie
+        sumOfErrors += ((errorsInLayers.get(errorsInLayers.size()-1).get(j))*(layers.get(i+1).neurons.get(j).get(k)));
+        }
+        }
+        for (int j=0;j < layers.get(i).neurons.size();j++){
+        //Sumabłędu warstwy następnej pomnożona przez to co potrzeba
+        errors.add(sumOfErrors*layers.get(i).activationFunction.Derivative(layers.get(i).outputsOfNeurons.get(j)));
+        }
+        errorsInLayers.add(errors);
+        }*/

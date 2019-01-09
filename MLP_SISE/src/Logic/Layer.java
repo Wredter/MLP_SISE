@@ -20,9 +20,9 @@ public class Layer {
         for(int i=0;i<numberOfNeurons;i++){
             ArrayList<Double> temp = new ArrayList<>();
             for(int j=0;j<numberOfInputs;j++){
-                temp.add((rng.nextDouble()-0.5)*2);
+                temp.add((rng.nextDouble()-0.5)*20);
             }
-            temp.add((rng.nextDouble()*0.5)*2);
+            temp.add((rng.nextDouble()*0.5)*20);
             neurons.add(temp);
         }
         //System.out.println(neurons);
