@@ -2,6 +2,7 @@ import Logic.Layer;
 import Logic.Network;
 import Plot.Plot;
 
+import java.awt.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,23 +13,24 @@ public class Main {
 
         ////////////////////////////////////////DATAPREP/////////////////////////////////////////////////////////////////////////////
         String projPath = "D:\\UnityProjects\\MLP_SISE\\MLP_SISE";
-        int numberOfEpocs = 100;
+        int numberOfEpocs = 50;
         Double sumaBledzikow;
         ArrayList<Integer> neuronsOnLayers = new ArrayList<>();
-        neuronsOnLayers.add(50);
-        neuronsOnLayers.add(15);
         neuronsOnLayers.add(10);
-        DataService dataService = new DataService(true);
-        DataService xpom = new DataService(false);
+        //neuronsOnLayers.add(30);
+        //neuronsOnLayers.add(30);
+        //neuronsOnLayers.add(10);
+        DataService dataService = new DataService(true,100);
+        DataService xpom = new DataService(false,1000);
         ArrayList<Double> bledzik = new ArrayList<>();
         ArrayList<Double> bledzikipom = new ArrayList<>();
         ArrayList<Double> x = new ArrayList<>();
-        for(int i =1;i<=100;i++){
+        for(int i =1;i<=1000;i++){
             x.add((double)i);
         }
         ArrayList<Double> y = new ArrayList<>();
         ArrayList<Double> x1 = new ArrayList<>();
-        for(int i =1;i<=100;i++){
+        for(int i =1;i<=1000;i++){
             x1.add((double)i);
         }
         ArrayList<Double> y1 = new ArrayList<>();
@@ -60,7 +62,7 @@ public class Main {
         for(int i = 0;i<x.size();i++){
             y.add(siec.FeedForward(xpom.testData.get(i)).get(0));
         }
-        Plot plot = Plot.plot(null).series("Siec",Plot.data().xy(x,y),null).series("poprawne",Plot.data().xy(x1,y1),null);;
+        Plot plot = Plot.plot(null).series("Siec",Plot.data().xy(x,y),new Plot.DataSeriesOptions().color(Color.RED)).series("poprawne",Plot.data().xy(x1,y1),null);;
         try {
             plot.save("PlotTest_1","png");
         } catch (IOException e) {

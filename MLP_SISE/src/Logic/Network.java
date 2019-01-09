@@ -8,7 +8,7 @@ import java.util.Collections;
 
 public class Network {
     ArrayList<Layer> layers;
-    Double learningRate = 0.01;
+    Double learningRate = 0.001;
     public Network(int numberOfInputs,int numberOfOutputs,int numberOfHidenLayers,ArrayList<Integer> numberOfNeuronsInEachHidenLayer){
         layers = new ArrayList<>();
         layers.add(new Layer(numberOfNeuronsInEachHidenLayer.get(0),numberOfInputs,new Sigma()));
@@ -49,9 +49,13 @@ public class Network {
             for(int j = 0;j < layers.get(i).neurons.size();j++){
                 Double sumB = 0d;
                 for(int x = 0;x < layers.get(i+1).neurons.size();x++){
-                    sumB += errorsInLayers.get(errorsInLayers.size()-1).get(x)*layers.get(i+1).neurons.get(x).get(j);
+                    Double pomA = errorsInLayers.get(errorsInLayers.size()-1).get(x);
+                    Double pomB = layers.get(i+1).neurons.get(x).get(j);
+                    sumB += (pomA*pomB);
                 }
-                errors.add(sumB*layers.get(i).activationFunction.Derivative(layers.get(i).outputsOfNeurons.get(j)));
+                Double pomC = layers.get(i).activationFunction.Derivative(layers.get(i).outputsOfNeurons.get(j));
+                Double pomD = sumB*pomC;
+                errors.add(pomD);
             }
             errorsInLayers.add(errors);
         }
