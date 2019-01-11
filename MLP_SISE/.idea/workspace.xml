@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77ba361b-c6f9-46f0-bdea-88004cb4f50c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/PlotTest_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/PlotTest_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/błąd.png" beforeDir="false" afterPath="$PROJECT_DIR$/błąd.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlotTest_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/błąd.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logic/Layer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logic/Layer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logic/Network.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logic/Network.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,48 +19,52 @@
     <session id="-108666535">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.20" value="4" />
+          <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="5583" />
+          <entry key="java" value="5833" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5583" />
+          <entry key="JAVA" value="5833" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="JAVA/" value="2" />
+          <entry key="MODULES/mdl-MLP_SISE" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="14" />
-          <entry key="png" value="26" />
+          <entry key="java" value="16" />
+          <entry key="png" value="53" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="Image" value="26" />
-          <entry key="JAVA" value="14" />
+          <entry key="Image" value="53" />
+          <entry key="JAVA" value="16" />
+          <entry key="UML" value="3" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+            <state relative-caret-position="630">
+              <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Plot/Plot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="658" column="29" lean-forward="true" selection-start-line="658" selection-start-column="29" selection-end-line="658" selection-end-column="29" />
+            <state relative-caret-position="179">
+              <caret line="410" column="51" selection-start-line="410" selection-start-column="47" selection-end-line="410" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,48 +84,105 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/błąd.png">
-          <provider selected="true" editor-type-id="images" />
+      <file pinned="false" current-in-tab="false">
+        <entry file="uml://JAVA/">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement />
+              <nodes>
+                <node x="0.0" y="123.0">Logic.Layer</node>
+                <node x="643.0" y="168.0">Functions.Linear</node>
+                <node x="343.6785714285714" y="0.0">Functions.ActivationFunctions</node>
+                <node x="202.5" y="336.0">Logic.Network</node>
+                <node x="366.0" y="168.0">Functions.Sigma</node>
+                <node x="571.5" y="369.0">DataService</node>
+                <node x="466.0" y="549.0">Main</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="Functions.Sigma" target="Functions.ActivationFunctions">
+                  <point x="0.0" y="-36.5" />
+                  <point x="494.5" y="98.0" />
+                  <point x="472.1785714285714" y="98.0" />
+                  <point x="0.0" y="36.5" />
+                </edge>
+                <edge source="Main" target="DataService">
+                  <point x="21.125" y="-25.5" />
+                  <point x="571.625" y="519.0" />
+                  <point x="636.75" y="519.0" />
+                  <point x="-65.25" y="48.5" />
+                </edge>
+                <edge source="Main" target="Logic.Network">
+                  <point x="-21.125" y="-25.5" />
+                  <point x="529.375" y="519.0" />
+                  <point x="464.25" y="519.0" />
+                  <point x="87.25" y="81.5" />
+                </edge>
+                <edge source="Logic.Network" target="Logic.Layer">
+                  <point x="-43.625" y="-81.5" />
+                  <point x="333.375" y="311.0" />
+                  <point x="259.5" y="311.0" />
+                  <point x="86.5" y="81.5" />
+                </edge>
+                <edge source="Functions.Linear" target="Functions.ActivationFunctions">
+                  <point x="0.0" y="-36.5" />
+                  <point x="771.5" y="98.0" />
+                  <point x="557.8452380952381" y="98.0" />
+                  <point x="85.66666666666663" y="36.5" />
+                </edge>
+                <edge source="Logic.Network" target="Functions.Sigma">
+                  <point x="43.625" y="-81.5" />
+                  <point x="420.625" y="311.0" />
+                  <point x="494.5" y="311.0" />
+                  <point x="0.0" y="36.5" />
+                </edge>
+                <edge source="Logic.Layer" target="Functions.ActivationFunctions">
+                  <point x="0.0" y="-81.5" />
+                  <point x="173.0" y="98.0" />
+                  <point x="386.5119047619047" y="98.0" />
+                  <point x="-85.66666666666669" y="36.5" />
+                </edge>
+                <edge source="Logic.Network" target="Functions.Linear">
+                  <point x="130.875" y="-81.5" />
+                  <point x="507.875" y="311.0" />
+                  <point x="771.5" y="311.0" />
+                  <point x="0.0" y="36.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.0" x="-315.5" y="41.0" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Fields</Category>
+                <Category>Constructors</Category>
+                <Category>Methods</Category>
+                <Category>Properties</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+            <state relative-caret-position="323">
+              <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PlotTest_1.png">
-          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Logic/Layer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="230">
-              <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+              <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Functions/Linear.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-              <folding>
-                <element signature="e#138#139#0" expanded="true" />
-                <element signature="e#166#167#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -131,7 +191,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Logic/Network.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="-85">
               <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -165,6 +225,13 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>plotOpts</find>
+      <find>axis</find>
+      <find>Axis</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -176,8 +243,8 @@
         <option value="$PROJECT_DIR$/src/Functions/Sigma.java" />
         <option value="$PROJECT_DIR$/src/Functions/Linear.java" />
         <option value="$PROJECT_DIR$/src/Plot/Plot.java" />
-        <option value="$PROJECT_DIR$/src/Logic/Network.java" />
         <option value="$PROJECT_DIR$/src/DataService.java" />
+        <option value="$PROJECT_DIR$/src/Logic/Network.java" />
         <option value="$PROJECT_DIR$/src/Logic/Layer.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
@@ -189,8 +256,8 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -200,6 +267,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -218,17 +286,23 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Logic" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="MLP_SISE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MLP_SISE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Plot" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -278,22 +352,23 @@
       <workItem from="1547021764557" duration="2277000" />
       <workItem from="1547040095175" duration="9122000" />
       <workItem from="1547061337724" duration="4206000" />
+      <workItem from="1547142611871" duration="8574000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53835000" />
+    <option name="totallyTimeSpent" value="62409000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15938166" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33041576" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33296824" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -463,39 +538,175 @@
     <entry file="file://$PROJECT_DIR$/MLP_SISE.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Plot/Plot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="658" column="29" lean-forward="true" selection-start-line="658" selection-start-column="29" selection-end-line="658" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+    <entry file="uml://MODULES/mdl-MLP_SISE">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MODULES</ID>
+          <OriginalElement>mdl-MLP_SISE</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="66.0" y="14.5" />
+          <SelectedNodes />
+          <Categories />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="0.0" y="123.0">Logic.Layer</node>
+            <node x="643.0" y="168.0">Functions.Linear</node>
+            <node x="343.6785714285714" y="0.0">Functions.ActivationFunctions</node>
+            <node x="202.5" y="336.0">Logic.Network</node>
+            <node x="366.0" y="168.0">Functions.Sigma</node>
+            <node x="571.5" y="369.0">DataService</node>
+            <node x="466.0" y="549.0">Main</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="Functions.Sigma" target="Functions.ActivationFunctions">
+              <point x="0.0" y="-36.5" />
+              <point x="494.5" y="98.0" />
+              <point x="472.1785714285714" y="98.0" />
+              <point x="0.0" y="36.5" />
+            </edge>
+            <edge source="Main" target="DataService">
+              <point x="21.125" y="-25.5" />
+              <point x="571.625" y="519.0" />
+              <point x="636.75" y="519.0" />
+              <point x="-65.25" y="48.5" />
+            </edge>
+            <edge source="Main" target="Logic.Network">
+              <point x="-21.125" y="-25.5" />
+              <point x="529.375" y="519.0" />
+              <point x="464.25" y="519.0" />
+              <point x="87.25" y="81.5" />
+            </edge>
+            <edge source="Logic.Network" target="Logic.Layer">
+              <point x="-43.625" y="-81.5" />
+              <point x="333.375" y="311.0" />
+              <point x="259.5" y="311.0" />
+              <point x="86.5" y="81.5" />
+            </edge>
+            <edge source="Functions.Linear" target="Functions.ActivationFunctions">
+              <point x="0.0" y="-36.5" />
+              <point x="771.5" y="98.0" />
+              <point x="557.8452380952381" y="98.0" />
+              <point x="85.66666666666663" y="36.5" />
+            </edge>
+            <edge source="Logic.Network" target="Functions.Sigma">
+              <point x="43.625" y="-81.5" />
+              <point x="420.625" y="311.0" />
+              <point x="494.5" y="311.0" />
+              <point x="0.0" y="36.5" />
+            </edge>
+            <edge source="Logic.Layer" target="Functions.ActivationFunctions">
+              <point x="0.0" y="-81.5" />
+              <point x="173.0" y="98.0" />
+              <point x="386.5119047619047" y="98.0" />
+              <point x="-85.66666666666669" y="36.5" />
+            </edge>
+            <edge source="Logic.Network" target="Functions.Linear">
+              <point x="130.875" y="-81.5" />
+              <point x="507.875" y="311.0" />
+              <point x="771.5" y="311.0" />
+              <point x="0.0" y="36.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-315.5" y="41.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DataService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+        <state relative-caret-position="323">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logic/Layer.java">
+    <entry file="file://$PROJECT_DIR$/src/Plot/Plot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+        <state relative-caret-position="179">
+          <caret line="410" column="51" selection-start-line="410" selection-start-column="47" selection-end-line="410" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/błąd.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlotTest_1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp_1_2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp_1_2b.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp_1_3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp_1_3b.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp_1_4.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp_1_4b.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp_1_5.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp_1_5b.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp_2_1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp_2_1b.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp_2_2b.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp_2_2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp_3_1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp_3_1b.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp_3_3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp_3_3b.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/Network.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="-85">
           <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -504,21 +715,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/exp_4_2b.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exp_4_2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logic/Layer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        <state relative-caret-position="230">
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PlotTest_1.png">
+    <entry file="file://$PROJECT_DIR$/exp_4_1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/błąd.png">
+    <entry file="file://$PROJECT_DIR$/exp_4_1b.png">
       <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
